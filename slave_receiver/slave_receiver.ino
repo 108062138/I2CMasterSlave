@@ -16,7 +16,7 @@ Servo Servo1;
 void setup() {
   Serial.begin(9600);           // start serial for output
   Serial.println("start slave");
-  Wire.begin(4);                // join i2c bus with address #8
+  Wire.begin(0xAB);                // join i2c bus with address #8
   Wire.onReceive(receiveEvent); // register event
   Servo1.attach(9);
   

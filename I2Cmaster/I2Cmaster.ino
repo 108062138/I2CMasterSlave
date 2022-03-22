@@ -36,7 +36,7 @@ void display_LCD(int ServoPosition) {
     lcd.setCursor(0, 11);
     lcd.print(ServoPosition);
     lcd.print(" ");
-    Wire.beginTransmission(4); // transmit to device #8
+    Wire.beginTransmission(0xAB); // transmit to device #8
     Wire.write("ServoPosition is ");        // sends five bytes
     Wire.write(ServoPosition);              // sends one byte
     Wire.endTransmission();    // stop transmitting
